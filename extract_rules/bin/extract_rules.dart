@@ -18,9 +18,17 @@ void main(List<String> arguments) async {
   final match = regex.firstMatch(res.body)?.group(1);
   if (match == null) throw Exception("Unable to parse $url");
 
-  final origin = Platform.environment["CI"] == "true" ? " by CI" : " manually";
+  final origin = () {
+    if (Platform.environment["CI"] == "true") {
+      return "by CI";
+    }
+    if (Platform.environment["GITHUB_ACTIONS"] == "true") {
+      return "by Github Actions";
+    }
+    return "manually";
+  }();
   final string = """
-# Generated$origin on ${DateFormat.yMMMMd().add_Hm().format(DateTime.now().toUtc())} UTC
+# Generated $origin on ${DateFormat.yMMMMd().add_Hm().format(DateTime.now().toUtc())} UTC
 
 $match
   """;
