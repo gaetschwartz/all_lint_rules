@@ -19,6 +19,7 @@ jobs:
         
       - name: Install dependencies
         run: dart pub get
+        working-directory: all_lint_rules/
         
       - name: Install dependencies
         run: dart pub get
