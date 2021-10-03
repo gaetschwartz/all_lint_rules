@@ -16,22 +16,23 @@ jobs:
 
       - name: Setup Dart SDK
         uses: dart-lang/setup-dart@v1.2
-        
+
       - name: Install dependencies
         run: dart pub get
         working-directory: all_lint_rules/
-        
+
       - name: Install dependencies
         run: dart pub get
         working-directory: extract_rules/
 
       - name: Extract rules
         run: dart extract_rules/bin/extract_rules.dart all_lint_rules/lib/all.yaml
-        
+
       - uses: EndBug/add-and-commit@v7
         with:
-          message: '[Scheduled] Generate all.yaml'
+          message: "[Scheduled] Generate all.yaml"
           default_author: github_actions
-          add: "all.yaml"
-          
+          add: "all_lint_rules/lib/*.yaml"
+          push: true
+
       - run: git status
