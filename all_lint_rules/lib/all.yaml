@@ -1,3 +1,5 @@
+# Generated on October 3, 2021 16:47 UTC
+
 linter:
   rules:
     - always_declare_return_types
@@ -192,3 +194,5 @@ linter:
     - use_to_and_as_if_applicable
     - valid_regexps
     - void_checks
+
+  
