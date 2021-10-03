@@ -22,9 +22,6 @@ void main(List<String> arguments) async {
     if (Platform.environment["CI"] == "true") {
       return "by CI";
     }
-    if (Platform.environment["GITHUB_ACTIONS"] == "true") {
-      return "by Github Actions";
-    }
     return "manually";
   }();
   final string = """
