@@ -1,5 +1,3 @@
-  # Generated manually on October 4, 2021 11:44:05 UTC
-
 linter:
   rules:
     - always_declare_return_types
@@ -194,5 +192,3 @@ linter:
     - use_to_and_as_if_applicable
     - valid_regexps
     - void_checks
-
-  
