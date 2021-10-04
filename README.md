@@ -1,6 +1,6 @@
 # All lint rules
 
-To use, add `all_lints_rules` to your dev dependencies:
+To use, add `all_lint_rules_community` to your dev dependencies:
 
 ```yaml
 dev_dependencies:
