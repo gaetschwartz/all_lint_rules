@@ -4,7 +4,7 @@ To use, add `all_lints_rules` to your dev dependencies:
 
 ```yaml
 dev_dependencies:
-  all_lint_rules:
+  all_lint_rules_community:
     git: https://github.com/gaetschwartz/all_lint_rules
 ```
 
@@ -12,7 +12,7 @@ dev_dependencies:
 Then, include it in your analysis_options.yaml: 
 
 ```yaml
-include: package:all_lint_rules/all.yaml
+include: package:all_lint_rules_community/all.yaml
 
 # REST OF YOUR ANALYSIS_OPTIONS.YAML FILE
 analyzer:
