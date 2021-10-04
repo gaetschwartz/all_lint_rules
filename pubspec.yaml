@@ -1,7 +1,11 @@
-name: all_lint_rules
-description: A new Flutter package project.
-version: 0.0.1
+name: all_lint_rules_community
+description: Automatically updated all lint rules file !
+version: 0.0.2
 repository: https://github.com/gaetschwartz/all_lint_rules
 
 environment:
   sdk: ">=2.14.0 <3.0.0"
+
+alr_last_generated: October 4, 2021 11:44:05 UTC
+alr_origin: user-generated
+alr_hash: CtV+X19WviSPcC8Pd41/snIpB64dgCK2Wwwk/9tU5Ak=
