@@ -1,3 +1,1 @@
-## 0.0.1
-
-* TODO: Describe initial release.
+### Changelog is not supported as of now.
