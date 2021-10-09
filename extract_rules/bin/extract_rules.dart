@@ -134,7 +134,7 @@ $match
 
   if (verbose) print(updated);
 
-  final newData = jsonEncode({
+  final newData = JsonEncoder.withIndent(" ").convert({
     'hash': currentHash,
     'origin': origin.toString(),
     'last_generated': date,
