@@ -4,8 +4,7 @@ To use, add `all_lint_rules_community` to your dev dependencies:
 
 ```yaml
 dev_dependencies:
-  all_lint_rules_community:
-    git: https://github.com/gaetschwartz/all_lint_rules
+  all_lint_rules_community: ^0.0.3
 ```
 
 
