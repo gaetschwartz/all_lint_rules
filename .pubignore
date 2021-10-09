@@ -30,3 +30,4 @@ build/
 
 extract_rules/
 .did_write
+data.json

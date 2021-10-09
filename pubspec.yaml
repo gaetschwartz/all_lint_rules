@@ -5,7 +5,3 @@ repository: https://github.com/gaetschwartz/all_lint_rules
 
 environment:
   sdk: ">=2.14.0 <3.0.0"
-
-alr_last_generated: October 4, 2021 11:44:05 UTC
-alr_origin: user-generated
-alr_hash: CtV+X19WviSPcC8Pd41/snIpB64dgCK2Wwwk/9tU5Ak=

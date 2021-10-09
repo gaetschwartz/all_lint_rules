@@ -60,6 +60,7 @@ void main(List<String> arguments) async {
   final proj = Directory(parsed.rest.first);
   final pubspec = File(path.join(proj.path, "pubspec.yaml"));
   final file = File(path.join(proj.path, "lib", "all.yaml"));
+  final dataFile = File(path.join(proj.path, "data.json"));
 
   if (!pubspec.existsSync()) throw Exception("$file not found");
   if (!file.existsSync()) throw Exception("$file not found");
@@ -74,8 +75,8 @@ void main(List<String> arguments) async {
   if (ver == null) throw Exception("Pubspec.yaml doesn't have any version.");
   final nextVersion = ver.nextPatch;
 
-  final lastHashRegexp = RegExp(r"alr_hash: (.+)");
-  final lastHash = lastHashRegexp.firstMatch(pusbpecString)?.group(1);
+  final data = jsonDecode(await dataFile.readAsString()) as Map;
+  final lastHash = data["hash"];
 
   // ===== EDIT lib/all.yaml =====
 
@@ -121,23 +122,10 @@ $match
   }
 
   // ===== EDIT pubspec.yaml =====
-  final updated = pusbpecString
-      .replaceFirst(
-        "version: ${ver.toString()}",
-        "version: ${nextVersion.toString()}",
-      )
-      .replaceFirst(
-        RegExp("alr_last_generated: .*"),
-        "alr_last_generated: $date",
-      )
-      .replaceFirst(
-        RegExp("alr_origin: .*"),
-        "alr_origin: $origin",
-      )
-      .replaceFirst(
-        lastHashRegexp,
-        "alr_hash: $currentHash",
-      );
+  final updated = pusbpecString.replaceFirst(
+    "version: ${ver.toString()}",
+    "version: ${nextVersion.toString()}",
+  );
 
   final updatedPub = Pubspec.parse(updated);
   if (updatedPub.version != nextVersion) {
@@ -146,12 +134,19 @@ $match
 
   if (verbose) print(updated);
 
+  final newData = jsonEncode({
+    'hash': currentHash,
+    'origin': origin.toString(),
+    'last_generated': date,
+  });
+
   print("[*] Writing to files...");
   if (dry) {
     print("    Dry run, skipped.");
   } else {
     await file.writeAsString(string);
     await pubspec.writeAsString(updated);
+    await dataFile.writeAsString(newData);
     didWrite = true;
     print("    Done writing !");
   }
