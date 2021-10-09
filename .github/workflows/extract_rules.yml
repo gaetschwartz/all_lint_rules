@@ -33,7 +33,7 @@ jobs:
 
       - name: Echo result
         run: |
-          [[ ${{ env.did_write }} == "true" ]] && echo "Action did write to files." || echo "Action did not write to files."
+          [[ ${{ env.did_write  == 'true' }} ]] && echo "Action did write to files." || echo "Action did not write to files."
 
       - uses: EndBug/add-and-commit@v7
         if: ${{ env.did_write == 'true' }}
