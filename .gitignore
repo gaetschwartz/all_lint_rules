@@ -29,3 +29,4 @@
 build/
 
 lib/*.yaml
+.did_write

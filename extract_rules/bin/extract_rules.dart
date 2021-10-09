@@ -12,6 +12,7 @@ import 'package:yaml/yaml.dart';
 final regex = RegExp(r"<code>(.*)<\/code>", dotAll: true);
 
 void main(List<String> arguments) async {
+  bool didWrite = false;
   final isCI = Platform.environment["CI"] == "true";
 
   final argParser = ArgParser()
@@ -119,14 +120,6 @@ $match
     throw FormatException("Invalid yaml file", fileYaml);
   }
 
-  print("[*] Writing to ${file.path}...");
-  if (dry) {
-    print("    Dry run, skipped.");
-  } else {
-    await file.writeAsString(string);
-    print("    Done writing !");
-  }
-
   // ===== EDIT pubspec.yaml =====
   final updated = pusbpecString
       .replaceFirst(
@@ -153,13 +146,23 @@ $match
 
   if (verbose) print(updated);
 
-  print("[*] Writing to ${pubspec.path}...");
+  print("[*] Writing to files...");
   if (dry) {
     print("    Dry run, skipped.");
   } else {
+    await file.writeAsString(string);
     await pubspec.writeAsString(updated);
+    didWrite = true;
     print("    Done writing !");
   }
+
+  final didWriteFiles = File(".did_write");
+  if (didWrite) {
+    await didWriteFiles.create();
+  } else {
+    await didWriteFiles.delete();
+  }
+  exit(0);
 }
 
 class Origin {

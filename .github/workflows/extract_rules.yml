@@ -27,8 +27,30 @@ jobs:
       - name: Extract rules
         run: dart extract_rules/bin/extract_rules.dart .
 
+      - name: Write last result to env
+        run: |
+          echo "did_write=$([[ -f ".did_write" ]] && echo "true" || echo "false")" >> $GITHUB_ENV
+
+      - name: Echo result
+        run: |
+          [[ ${{ env.did_write }} == "true" ]] && echo "Action did write to files." || echo "Action did not write to files."
+
       - uses: EndBug/add-and-commit@v7
+        if: ${{ env.did_write }}
         with:
           message: "[Scheduled] Generate all.yaml"
           default_author: github_actions
           push: true
+
+      - name: Setup Pub Credentials
+        if: ${{ env.did_write }}
+        env:
+          PUB_DEV_PUBLISH_ACCESS_TOKEN: ${{ secrets.PUB_DEV_PUBLISH_ACCESS_TOKEN }}
+          PUB_DEV_PUBLISH_REFRESH_TOKEN: ${{ secrets.PUB_DEV_PUBLISH_REFRESH_TOKEN }}
+          PUB_DEV_PUBLISH_TOKEN_ENDPOINT: ${{ secrets.PUB_DEV_PUBLISH_TOKEN_ENDPOINT }}
+          PUB_DEV_PUBLISH_EXPIRATION: ${{ secrets.PUB_DEV_PUBLISH_EXPIRATION }}
+        run: bash ./CI/pub_login.sh
+
+      - name: Publish package
+        if: ${{ env.did_write }}
+        run: dart pub publish -f

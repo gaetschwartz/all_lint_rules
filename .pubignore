@@ -29,3 +29,4 @@
 build/
 
 extract_rules/
+.did_write
