@@ -1,193 +1,199 @@
+# 0.0.3
+- Updated README.md
+- Updated pubspec.yaml
+- Added analysis_options.yaml
+- Added CL/pub_login.sh
+
 # 0.0.1
-- Added: `always_declare_return_types`
-- Added: `always_put_control_body_on_new_line`
-- Added: `always_put_required_named_parameters_first`
-- Added: `always_require_non_null_named_parameters`
-- Added: `always_specify_types`
-- Added: `always_use_package_imports`
-- Added: `annotate_overrides`
-- Added: `avoid_annotating_with_dynamic`
-- Added: `avoid_bool_literals_in_conditional_expressions`
-- Added: `avoid_catches_without_on_clauses`
-- Added: `avoid_catching_errors`
-- Added: `avoid_classes_with_only_static_members`
-- Added: `avoid_double_and_int_checks`
-- Added: `avoid_dynamic_calls`
-- Added: `avoid_empty_else`
-- Added: `avoid_equals_and_hash_code_on_mutable_classes`
-- Added: `avoid_escaping_inner_quotes`
-- Added: `avoid_field_initializers_in_const_classes`
-- Added: `avoid_function_literals_in_foreach_calls`
-- Added: `avoid_implementing_value_types`
-- Added: `avoid_init_to_null`
-- Added: `avoid_js_rounded_ints`
-- Added: `avoid_multiple_declarations_per_line`
-- Added: `avoid_null_checks_in_equality_operators`
-- Added: `avoid_positional_boolean_parameters`
-- Added: `avoid_print`
-- Added: `avoid_private_typedef_functions`
-- Added: `avoid_redundant_argument_values`
-- Added: `avoid_relative_lib_imports`
-- Added: `avoid_renaming_method_parameters`
-- Added: `avoid_return_types_on_setters`
-- Added: `avoid_returning_null`
-- Added: `avoid_returning_null_for_future`
-- Added: `avoid_returning_null_for_void`
-- Added: `avoid_returning_this`
-- Added: `avoid_setters_without_getters`
-- Added: `avoid_shadowing_type_parameters`
-- Added: `avoid_single_cascade_in_expression_statements`
-- Added: `avoid_slow_async_io`
-- Added: `avoid_type_to_string`
-- Added: `avoid_types_as_parameter_names`
-- Added: `avoid_types_on_closure_parameters`
-- Added: `avoid_unnecessary_containers`
-- Added: `avoid_unused_constructor_parameters`
-- Added: `avoid_void_async`
-- Added: `avoid_web_libraries_in_flutter`
-- Added: `await_only_futures`
-- Added: `camel_case_extensions`
-- Added: `camel_case_types`
-- Added: `cancel_subscriptions`
-- Added: `cascade_invocations`
-- Added: `cast_nullable_to_non_nullable`
-- Added: `close_sinks`
-- Added: `comment_references`
-- Added: `constant_identifier_names`
-- Added: `control_flow_in_finally`
-- Added: `curly_braces_in_flow_control_structures`
-- Added: `depend_on_referenced_packages`
-- Added: `deprecated_consistency`
-- Added: `diagnostic_describe_all_properties`
-- Added: `directives_ordering`
-- Added: `do_not_use_environment`
-- Added: `empty_catches`
-- Added: `empty_constructor_bodies`
-- Added: `empty_statements`
-- Added: `eol_at_end_of_file`
-- Added: `exhaustive_cases`
-- Added: `file_names`
-- Added: `flutter_style_todos`
-- Added: `hash_and_equals`
-- Added: `implementation_imports`
-- Added: `invariant_booleans`
-- Added: `iterable_contains_unrelated_type`
-- Added: `join_return_with_assignment`
-- Added: `leading_newlines_in_multiline_strings`
-- Added: `library_names`
-- Added: `library_prefixes`
-- Added: `library_private_types_in_public_api`
-- Added: `lines_longer_than_80_chars`
-- Added: `list_remove_unrelated_type`
-- Added: `literal_only_boolean_expressions`
-- Added: `missing_whitespace_between_adjacent_strings`
-- Added: `no_adjacent_strings_in_list`
-- Added: `no_default_cases`
-- Added: `no_duplicate_case_values`
-- Added: `no_logic_in_create_state`
-- Added: `no_runtimeType_toString`
-- Added: `non_constant_identifier_names`
-- Added: `noop_primitive_operations`
-- Added: `null_check_on_nullable_type_parameter`
-- Added: `null_closures`
-- Added: `omit_local_variable_types`
-- Added: `one_member_abstracts`
-- Added: `only_throw_errors`
-- Added: `overridden_fields`
-- Added: `package_api_docs`
-- Added: `package_names`
-- Added: `package_prefixed_library_names`
-- Added: `parameter_assignments`
-- Added: `prefer_adjacent_string_concatenation`
-- Added: `prefer_asserts_in_initializer_lists`
-- Added: `prefer_asserts_with_message`
-- Added: `prefer_collection_literals`
-- Added: `prefer_conditional_assignment`
-- Added: `prefer_const_constructors`
-- Added: `prefer_const_constructors_in_immutables`
-- Added: `prefer_const_declarations`
-- Added: `prefer_const_literals_to_create_immutables`
-- Added: `prefer_constructors_over_static_methods`
-- Added: `prefer_contains`
-- Added: `prefer_double_quotes`
-- Added: `prefer_equal_for_default_values`
-- Added: `prefer_expression_function_bodies`
-- Added: `prefer_final_fields`
-- Added: `prefer_final_in_for_each`
-- Added: `prefer_final_locals`
-- Added: `prefer_final_parameters`
-- Added: `prefer_for_elements_to_map_fromIterable`
-- Added: `prefer_foreach`
-- Added: `prefer_function_declarations_over_variables`
-- Added: `prefer_generic_function_type_aliases`
-- Added: `prefer_if_elements_to_conditional_expressions`
-- Added: `prefer_if_null_operators`
-- Added: `prefer_initializing_formals`
-- Added: `prefer_inlined_adds`
-- Added: `prefer_int_literals`
-- Added: `prefer_interpolation_to_compose_strings`
-- Added: `prefer_is_empty`
-- Added: `prefer_is_not_empty`
-- Added: `prefer_is_not_operator`
-- Added: `prefer_iterable_whereType`
-- Added: `prefer_mixin`
-- Added: `prefer_null_aware_method_calls`
-- Added: `prefer_null_aware_operators`
-- Added: `prefer_relative_imports`
-- Added: `prefer_single_quotes`
-- Added: `prefer_spread_collections`
-- Added: `prefer_typing_uninitialized_variables`
-- Added: `prefer_void_to_null`
-- Added: `provide_deprecation_message`
-- Added: `public_member_api_docs`
-- Added: `recursive_getters`
-- Added: `require_trailing_commas`
-- Added: `sized_box_for_whitespace`
-- Added: `slash_for_doc_comments`
-- Added: `sort_child_properties_last`
-- Added: `sort_constructors_first`
-- Added: `sort_pub_dependencies`
-- Added: `sort_unnamed_constructors_first`
-- Added: `test_types_in_equals`
-- Added: `throw_in_finally`
-- Added: `tighten_type_of_initializing_formals`
-- Added: `type_annotate_public_apis`
-- Added: `type_init_formals`
-- Added: `unawaited_futures`
-- Added: `unnecessary_await_in_return`
-- Added: `unnecessary_brace_in_string_interps`
-- Added: `unnecessary_const`
-- Added: `unnecessary_constructor_name`
-- Added: `unnecessary_final`
-- Added: `unnecessary_getters_setters`
-- Added: `unnecessary_lambdas`
-- Added: `unnecessary_new`
-- Added: `unnecessary_null_aware_assignments`
-- Added: `unnecessary_null_checks`
-- Added: `unnecessary_null_in_if_null_operators`
-- Added: `unnecessary_nullable_for_final_variable_declarations`
-- Added: `unnecessary_overrides`
-- Added: `unnecessary_parenthesis`
-- Added: `unnecessary_raw_strings`
-- Added: `unnecessary_statements`
-- Added: `unnecessary_string_escapes`
-- Added: `unnecessary_string_interpolations`
-- Added: `unnecessary_this`
-- Added: `unrelated_type_equality_checks`
-- Added: `unsafe_html`
-- Added: `use_build_context_synchronously`
-- Added: `use_full_hex_values_for_flutter_colors`
-- Added: `use_function_type_syntax_for_parameters`
-- Added: `use_if_null_to_convert_nulls_to_bools`
-- Added: `use_is_even_rather_than_modulo`
-- Added: `use_key_in_widget_constructors`
-- Added: `use_late_for_private_fields_and_variables`
-- Added: `use_named_constants`
-- Added: `use_raw_strings`
-- Added: `use_rethrow_when_possible`
-- Added: `use_setters_to_change_properties`
-- Added: `use_string_buffers`
-- Added: `use_test_throws_matchers`
-- Added: `use_to_and_as_if_applicable`
-- Added: `valid_regexps`
-- Added: `void_checks`
+- Added lint rule: `always_declare_return_types`
+- Added lint rule: `always_put_control_body_on_new_line`
+- Added lint rule: `always_put_required_named_parameters_first`
+- Added lint rule: `always_require_non_null_named_parameters`
+- Added lint rule: `always_specify_types`
+- Added lint rule: `always_use_package_imports`
+- Added lint rule: `annotate_overrides`
+- Added lint rule: `avoid_annotating_with_dynamic`
+- Added lint rule: `avoid_bool_literals_in_conditional_expressions`
+- Added lint rule: `avoid_catches_without_on_clauses`
+- Added lint rule: `avoid_catching_errors`
+- Added lint rule: `avoid_classes_with_only_static_members`
+- Added lint rule: `avoid_double_and_int_checks`
+- Added lint rule: `avoid_dynamic_calls`
+- Added lint rule: `avoid_empty_else`
+- Added lint rule: `avoid_equals_and_hash_code_on_mutable_classes`
+- Added lint rule: `avoid_escaping_inner_quotes`
+- Added lint rule: `avoid_field_initializers_in_const_classes`
+- Added lint rule: `avoid_function_literals_in_foreach_calls`
+- Added lint rule: `avoid_implementing_value_types`
+- Added lint rule: `avoid_init_to_null`
+- Added lint rule: `avoid_js_rounded_ints`
+- Added lint rule: `avoid_multiple_declarations_per_line`
+- Added lint rule: `avoid_null_checks_in_equality_operators`
+- Added lint rule: `avoid_positional_boolean_parameters`
+- Added lint rule: `avoid_print`
+- Added lint rule: `avoid_private_typedef_functions`
+- Added lint rule: `avoid_redundant_argument_values`
+- Added lint rule: `avoid_relative_lib_imports`
+- Added lint rule: `avoid_renaming_method_parameters`
+- Added lint rule: `avoid_return_types_on_setters`
+- Added lint rule: `avoid_returning_null`
+- Added lint rule: `avoid_returning_null_for_future`
+- Added lint rule: `avoid_returning_null_for_void`
+- Added lint rule: `avoid_returning_this`
+- Added lint rule: `avoid_setters_without_getters`
+- Added lint rule: `avoid_shadowing_type_parameters`
+- Added lint rule: `avoid_single_cascade_in_expression_statements`
+- Added lint rule: `avoid_slow_async_io`
+- Added lint rule: `avoid_type_to_string`
+- Added lint rule: `avoid_types_as_parameter_names`
+- Added lint rule: `avoid_types_on_closure_parameters`
+- Added lint rule: `avoid_unnecessary_containers`
+- Added lint rule: `avoid_unused_constructor_parameters`
+- Added lint rule: `avoid_void_async`
+- Added lint rule: `avoid_web_libraries_in_flutter`
+- Added lint rule: `await_only_futures`
+- Added lint rule: `camel_case_extensions`
+- Added lint rule: `camel_case_types`
+- Added lint rule: `cancel_subscriptions`
+- Added lint rule: `cascade_invocations`
+- Added lint rule: `cast_nullable_to_non_nullable`
+- Added lint rule: `close_sinks`
+- Added lint rule: `comment_references`
+- Added lint rule: `constant_identifier_names`
+- Added lint rule: `control_flow_in_finally`
+- Added lint rule: `curly_braces_in_flow_control_structures`
+- Added lint rule: `depend_on_referenced_packages`
+- Added lint rule: `deprecated_consistency`
+- Added lint rule: `diagnostic_describe_all_properties`
+- Added lint rule: `directives_ordering`
+- Added lint rule: `do_not_use_environment`
+- Added lint rule: `empty_catches`
+- Added lint rule: `empty_constructor_bodies`
+- Added lint rule: `empty_statements`
+- Added lint rule: `eol_at_end_of_file`
+- Added lint rule: `exhaustive_cases`
+- Added lint rule: `file_names`
+- Added lint rule: `flutter_style_todos`
+- Added lint rule: `hash_and_equals`
+- Added lint rule: `implementation_imports`
+- Added lint rule: `invariant_booleans`
+- Added lint rule: `iterable_contains_unrelated_type`
+- Added lint rule: `join_return_with_assignment`
+- Added lint rule: `leading_newlines_in_multiline_strings`
+- Added lint rule: `library_names`
+- Added lint rule: `library_prefixes`
+- Added lint rule: `library_private_types_in_public_api`
+- Added lint rule: `lines_longer_than_80_chars`
+- Added lint rule: `list_remove_unrelated_type`
+- Added lint rule: `literal_only_boolean_expressions`
+- Added lint rule: `missing_whitespace_between_adjacent_strings`
+- Added lint rule: `no_adjacent_strings_in_list`
+- Added lint rule: `no_default_cases`
+- Added lint rule: `no_duplicate_case_values`
+- Added lint rule: `no_logic_in_create_state`
+- Added lint rule: `no_runtimeType_toString`
+- Added lint rule: `non_constant_identifier_names`
+- Added lint rule: `noop_primitive_operations`
+- Added lint rule: `null_check_on_nullable_type_parameter`
+- Added lint rule: `null_closures`
+- Added lint rule: `omit_local_variable_types`
+- Added lint rule: `one_member_abstracts`
+- Added lint rule: `only_throw_errors`
+- Added lint rule: `overridden_fields`
+- Added lint rule: `package_api_docs`
+- Added lint rule: `package_names`
+- Added lint rule: `package_prefixed_library_names`
+- Added lint rule: `parameter_assignments`
+- Added lint rule: `prefer_adjacent_string_concatenation`
+- Added lint rule: `prefer_asserts_in_initializer_lists`
+- Added lint rule: `prefer_asserts_with_message`
+- Added lint rule: `prefer_collection_literals`
+- Added lint rule: `prefer_conditional_assignment`
+- Added lint rule: `prefer_const_constructors`
+- Added lint rule: `prefer_const_constructors_in_immutables`
+- Added lint rule: `prefer_const_declarations`
+- Added lint rule: `prefer_const_literals_to_create_immutables`
+- Added lint rule: `prefer_constructors_over_static_methods`
+- Added lint rule: `prefer_contains`
+- Added lint rule: `prefer_double_quotes`
+- Added lint rule: `prefer_equal_for_default_values`
+- Added lint rule: `prefer_expression_function_bodies`
+- Added lint rule: `prefer_final_fields`
+- Added lint rule: `prefer_final_in_for_each`
+- Added lint rule: `prefer_final_locals`
+- Added lint rule: `prefer_final_parameters`
+- Added lint rule: `prefer_for_elements_to_map_fromIterable`
+- Added lint rule: `prefer_foreach`
+- Added lint rule: `prefer_function_declarations_over_variables`
+- Added lint rule: `prefer_generic_function_type_aliases`
+- Added lint rule: `prefer_if_elements_to_conditional_expressions`
+- Added lint rule: `prefer_if_null_operators`
+- Added lint rule: `prefer_initializing_formals`
+- Added lint rule: `prefer_inlined_adds`
+- Added lint rule: `prefer_int_literals`
+- Added lint rule: `prefer_interpolation_to_compose_strings`
+- Added lint rule: `prefer_is_empty`
+- Added lint rule: `prefer_is_not_empty`
+- Added lint rule: `prefer_is_not_operator`
+- Added lint rule: `prefer_iterable_whereType`
+- Added lint rule: `prefer_mixin`
+- Added lint rule: `prefer_null_aware_method_calls`
+- Added lint rule: `prefer_null_aware_operators`
+- Added lint rule: `prefer_relative_imports`
+- Added lint rule: `prefer_single_quotes`
+- Added lint rule: `prefer_spread_collections`
+- Added lint rule: `prefer_typing_uninitialized_variables`
+- Added lint rule: `prefer_void_to_null`
+- Added lint rule: `provide_deprecation_message`
+- Added lint rule: `public_member_api_docs`
+- Added lint rule: `recursive_getters`
+- Added lint rule: `require_trailing_commas`
+- Added lint rule: `sized_box_for_whitespace`
+- Added lint rule: `slash_for_doc_comments`
+- Added lint rule: `sort_child_properties_last`
+- Added lint rule: `sort_constructors_first`
+- Added lint rule: `sort_pub_dependencies`
+- Added lint rule: `sort_unnamed_constructors_first`
+- Added lint rule: `test_types_in_equals`
+- Added lint rule: `throw_in_finally`
+- Added lint rule: `tighten_type_of_initializing_formals`
+- Added lint rule: `type_annotate_public_apis`
+- Added lint rule: `type_init_formals`
+- Added lint rule: `unawaited_futures`
+- Added lint rule: `unnecessary_await_in_return`
+- Added lint rule: `unnecessary_brace_in_string_interps`
+- Added lint rule: `unnecessary_const`
+- Added lint rule: `unnecessary_constructor_name`
+- Added lint rule: `unnecessary_final`
+- Added lint rule: `unnecessary_getters_setters`
+- Added lint rule: `unnecessary_lambdas`
+- Added lint rule: `unnecessary_new`
+- Added lint rule: `unnecessary_null_aware_assignments`
+- Added lint rule: `unnecessary_null_checks`
+- Added lint rule: `unnecessary_null_in_if_null_operators`
+- Added lint rule: `unnecessary_nullable_for_final_variable_declarations`
+- Added lint rule: `unnecessary_overrides`
+- Added lint rule: `unnecessary_parenthesis`
+- Added lint rule: `unnecessary_raw_strings`
+- Added lint rule: `unnecessary_statements`
+- Added lint rule: `unnecessary_string_escapes`
+- Added lint rule: `unnecessary_string_interpolations`
+- Added lint rule: `unnecessary_this`
+- Added lint rule: `unrelated_type_equality_checks`
+- Added lint rule: `unsafe_html`
+- Added lint rule: `use_build_context_synchronously`
+- Added lint rule: `use_full_hex_values_for_flutter_colors`
+- Added lint rule: `use_function_type_syntax_for_parameters`
+- Added lint rule: `use_if_null_to_convert_nulls_to_bools`
+- Added lint rule: `use_is_even_rather_than_modulo`
+- Added lint rule: `use_key_in_widget_constructors`
+- Added lint rule: `use_late_for_private_fields_and_variables`
+- Added lint rule: `use_named_constants`
+- Added lint rule: `use_raw_strings`
+- Added lint rule: `use_rethrow_when_possible`
+- Added lint rule: `use_setters_to_change_properties`
+- Added lint rule: `use_string_buffers`
+- Added lint rule: `use_test_throws_matchers`
+- Added lint rule: `use_to_and_as_if_applicable`
+- Added lint rule: `valid_regexps`
+- Added lint rule: `void_checks`
