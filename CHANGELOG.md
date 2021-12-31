@@ -1,3 +1,23 @@
+# 0.0.7
+- Added lint rule: `unnecessary_late`
+
+# 0.0.6
+- Added lint rule: `conditional_uri_does_not_exist`
+
+# 0.0.5
+- Updated README.md with dependency from pub.dev instead of the git
+
+- Added lint rule: `avoid_final_parameters`
+- Added lint rule: `no_leading_underscores_for_library_prefixes`
+- Added lint rule: `no_leading_underscores_for_local_identifiers`
+- Added lint rule: `secure_pubspec_urls`
+- Added lint rule: `sized_box_shrink_expand`
+- Added lint rule: `use_decorated_box`
+
+
+# 0.0.4
+- Removed unused fields from pubspec.yaml
+
 # 0.0.3
 - Updated README.md
 - Updated pubspec.yaml
