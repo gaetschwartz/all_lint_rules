@@ -61,9 +61,11 @@ void main(List<String> arguments) async {
   final pubspec = File(path.join(proj.path, "pubspec.yaml"));
   final file = File(path.join(proj.path, "lib", "all.yaml"));
   final dataFile = File(path.join(proj.path, "data.json"));
+  final changelog = File(path.join(proj.path, "CHANGELOG.md"));
 
-  if (!pubspec.existsSync()) throw Exception("$file not found");
+  if (!pubspec.existsSync()) throw Exception("$pubspec not found");
   if (!file.existsSync()) throw Exception("$file not found");
+  if (!changelog.existsSync()) throw Exception("$changelog not found");
 
   print("[i] Target project: ${proj.path}");
 
@@ -77,6 +79,9 @@ void main(List<String> arguments) async {
 
   final data = jsonDecode(await dataFile.readAsString()) as Map;
   final lastHash = data["hash"];
+
+// ===== PARSE pubspec.yaml =====
+  final changelogString = await changelog.readAsString();
 
   // ===== EDIT lib/all.yaml =====
 
@@ -149,6 +154,49 @@ $match
     await dataFile.writeAsString(newData);
     didWrite = true;
     print("    Done writing !");
+  }
+
+  // ===== WRITE CHANGELOG.md =====
+  print("[*] Checking git diff...");
+  if (dry) {
+    print("    Dry run, skipped.");
+  } else {
+    var gitDiff = await Process.run(
+      "git",
+      ["diff", "HEAD^", "lib/all.yaml"],
+      workingDirectory: proj.path,
+    );
+
+    final lines = gitDiff.stdout.split("\n");
+    final changes = <String>[];
+    int add = 0;
+    int remove = 0;
+
+    for (var i = 0; i < lines.length; i++) {
+      final line = lines[i];
+      if (line.startsWith("+    - ")) {
+        changes.add("- Added lint rule: `${line.substring(7)}`");
+        add++;
+        print("[i] Added lint rule: ${line.substring(7)}");
+      } else if (line.startsWith("-    - ")) {
+        changes.add("- Removed lint rule: `${line.substring(7)}`");
+        remove++;
+      }
+    }
+    if (changes.isNotEmpty) {
+      if (add != 0) {
+        print("[i] Added $add lint rule" + (add > 1 ? "s" : ""));
+      }
+      if (remove != 0) {
+        print("[i] Removed $remove lint rule" + (remove > 1 ? "s" : ""));
+      }
+
+      String newChangelog = "# ${nextVersion.toString()}\n" +
+          changes.join("\n") +
+          "\n" +
+          changelogString;
+      await changelog.writeAsString(newChangelog);
+    }
   }
 
   final didWriteFiles = File(".did_write");
