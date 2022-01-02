@@ -25,15 +25,12 @@ jobs:
         working-directory: extract_rules/
 
       - name: Extract rules
-        run: dart extract_rules/bin/extract_rules.dart .
+        run: dart extract_rules/bin/extract_rules.dart . --no-dry-run
 
       - name: Write last result to env
-        run: |
+        run: <|
+          set -ex
           echo "did_write=$([[ -f ".did_write" ]] && echo "true" || echo "false")" >> $GITHUB_ENV
-
-      - name: Echo result
-        run: |
-          [[ ${{ env.did_write == 'true' }} ]] && echo "Action did write to files." || echo "Action did not write to files."
 
       - uses: EndBug/add-and-commit@v7
         if: ${{ env.did_write == 'true' }}

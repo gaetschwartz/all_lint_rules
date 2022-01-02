@@ -11,7 +11,7 @@ dev_dependencies:
 Then, include it in your analysis_options.yaml: 
 
 ```yaml
-include: package:all_lint_rules_community/all_lint_rules.yaml
+include: package:all_lint_rules_community/all.yaml
 
 # REST OF YOUR ANALYSIS_OPTIONS.YAML FILE
 analyzer:

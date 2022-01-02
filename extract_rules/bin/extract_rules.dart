@@ -6,20 +6,21 @@ import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:path/path.dart' as path;
+import 'package:pub_semver/src/version.dart';
 import 'package:pubspec_parse/pubspec_parse.dart';
 import 'package:yaml/yaml.dart';
+
+import 'diff.dart';
 
 final regex = RegExp(r"<code>(.*)<\/code>", dotAll: true);
 
 void main(List<String> arguments) async {
-  bool didWrite = false;
   final isCI = Platform.environment["CI"] == "true";
 
   final argParser = ArgParser()
     ..addFlag(
       "dry-run",
-      abbr: "n",
-      defaultsTo: !isCI,
+      defaultsTo: true,
     )
     ..addFlag(
       "verbose",
@@ -44,26 +45,21 @@ void main(List<String> arguments) async {
     print(argParser.usage);
     exit(0);
   }
-  if (!isCI) {
-    print("Because we are not CI, defaults to dry-run");
-  }
-  final origin = () {
-    if (isCI) {
-      return Origin.ci;
-    }
-    return Origin.manually;
-  }();
 
-  final date =
-      DateFormat.yMMMMd().add_Hms().format(DateTime.now().toUtc()) + " UTC";
+  final origin = isCI ? Origin.ci : Origin.manually;
+
+  final date = DateFormat.yMMMMd().add_Hms().format(DateTime.now().toUtc()) + " UTC";
 
   final proj = Directory(parsed.rest.first);
-  final pubspec = File(path.join(proj.path, "pubspec.yaml"));
-  final file = File(path.join(proj.path, "lib", "all.yaml"));
-  final dataFile = File(path.join(proj.path, "data.json"));
+  final pubspec = WritableFile(path.join(proj.path, "pubspec.yaml"), dry);
+  final file = WritableFile(path.join(proj.path, "lib", "all.yaml"), dry);
+  final dataFile = WritableFile(path.join(proj.path, "data.json"), dry);
+  final changelog = WritableFile(path.join(proj.path, "CHANGELOG.md"), dry);
 
   if (!pubspec.existsSync()) throw Exception("$file not found");
   if (!file.existsSync()) throw Exception("$file not found");
+  if (!dataFile.existsSync()) throw Exception("$dataFile not found");
+  if (!changelog.existsSync()) throw Exception("$changelog not found");
 
   print("[i] Target project: ${proj.path}");
 
@@ -73,15 +69,14 @@ void main(List<String> arguments) async {
   final parsedPubspec = Pubspec.parse(pusbpecString);
   final ver = parsedPubspec.version;
   if (ver == null) throw Exception("Pubspec.yaml doesn't have any version.");
-  final nextVersion = ver.nextPatch;
+  final Version nextVersion = ver.nextPatch;
 
   final data = jsonDecode(await dataFile.readAsString()) as Map;
   final lastHash = data["hash"];
 
   // ===== EDIT lib/all.yaml =====
 
-  final url = Uri.parse(
-      "https://dart-lang.github.io/linter/lints/options/options.html");
+  final url = Uri.parse("https://dart-lang.github.io/linter/lints/options/options.html");
   final res = await http.get(url);
 
   final match = regex.firstMatch(res.body)?.group(1);
@@ -121,7 +116,13 @@ $match
     throw FormatException("Invalid yaml file", fileYaml);
   }
 
+  final diff = Diff.compareYAML(loadYaml(await file.readAsString()), fileYaml);
+  print("[i] Diff:");
+  print("    ${diff.removedRules.length} removed");
+  print("    ${diff.addedRules.length} added");
+
   // ===== EDIT pubspec.yaml =====
+
   final updated = pusbpecString.replaceFirst(
     "version: ${ver.toString()}",
     "version: ${nextVersion.toString()}",
@@ -141,22 +142,20 @@ $match
   });
 
   print("[*] Writing to files...");
-  if (dry) {
-    print("    Dry run, skipped.");
-  } else {
-    await file.writeAsString(string);
-    await pubspec.writeAsString(updated);
-    await dataFile.writeAsString(newData);
-    didWrite = true;
-    print("    Done writing !");
-  }
+
+  await file.writeAsString(string);
+  await pubspec.writeAsString(updated);
+  await dataFile.writeAsString(newData);
+  await changelog.writeAsString(diff.genNewChangelog(await changelog.readAsString(), nextVersion));
+  print("    Done writing !");
 
   final didWriteFiles = File(".did_write");
-  if (didWrite) {
+  if (!dry) {
     await didWriteFiles.create();
   } else {
-    await didWriteFiles.delete();
+    if (didWriteFiles.existsSync()) await didWriteFiles.delete();
   }
+
   exit(0);
 }
 
@@ -170,4 +169,27 @@ class Origin {
 
   @override
   String toString() => _value;
+}
+
+class WritableFile {
+  WritableFile(String path, this.dryRun) : file = File(path);
+  final File file;
+  final bool dryRun;
+
+  bool existsSync() => file.existsSync();
+
+  Future<void> writeAsString(String content) async {
+    if (dryRun) {
+      print("[i] Dry run, skipped writing to ${file.path}");
+      print("=" * 10 + " content " + "=" * 10);
+      print(content);
+      print("=" * 20);
+    } else {
+      await file.writeAsString(content);
+    }
+  }
+
+  Future<String> readAsString() {
+    return file.readAsString();
+  }
 }
