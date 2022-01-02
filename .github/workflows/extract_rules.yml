@@ -28,7 +28,7 @@ jobs:
         run: dart extract_rules/bin/extract_rules.dart . --no-dry-run
 
       - name: Write last result to env
-        run: <|
+        run: |-
           set -ex
           echo "did_write=$([[ -f ".did_write" ]] && echo "true" || echo "false")" >> $GITHUB_ENV
 
