@@ -24,7 +24,10 @@ class Diff {
     if (addedRules.isEmpty && removedRules.isEmpty) {
       return "No changes in the rules.";
     }
-    return addedRules.map((r) => "- Added `$r`.").join("\n") +
+    return addedRules
+            .map((r) =>
+                "- Added [`$r`](https://dart-lang.github.io/linter/lints/$r.html).")
+            .join("\n") +
         "\n" +
         removedRules.map((r) => "- Removed `$r`.").join("\n");
   }
