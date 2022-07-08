@@ -1,3 +1,7 @@
+## 0.0.11
+
+- Removed `invariant_booleans`.
+
 ## 0.0.10
 - Added [`discarded_futures`](https://dart-lang.github.io/linter/lints/discarded_futures.html).
 - Added [`unnecessary_null_aware_operator_on_extension_on_nullable`](https://dart-lang.github.io/linter/lints/unnecessary_null_aware_operator_on_extension_on_nullable.html).
@@ -12,4 +16,5 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
