@@ -1,3 +1,7 @@
+## 0.0.12
+- Added [`combinators_ordering`](https://dart-lang.github.io/linter/lints/combinators_ordering.html).
+
+
 ## 0.0.11
 
 - Removed `invariant_booleans`.
@@ -16,5 +20,6 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
