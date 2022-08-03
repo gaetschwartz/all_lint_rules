@@ -1,3 +1,7 @@
+## 0.0.13
+- Added [`use_string_in_part_of_directives`](https://dart-lang.github.io/linter/lints/use_string_in_part_of_directives.html).
+
+
 ## 0.0.12
 - Added [`combinators_ordering`](https://dart-lang.github.io/linter/lints/combinators_ordering.html).
 
@@ -20,6 +24,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
