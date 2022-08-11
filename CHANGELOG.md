@@ -1,3 +1,7 @@
+## 0.0.14
+- Added [`unreachable_from_main`](https://dart-lang.github.io/linter/lints/unreachable_from_main.html).
+
+
 ## 0.0.13
 - Added [`use_string_in_part_of_directives`](https://dart-lang.github.io/linter/lints/use_string_in_part_of_directives.html).
 
@@ -24,6 +28,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
