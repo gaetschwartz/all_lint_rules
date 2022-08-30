@@ -10,7 +10,7 @@ import 'package:pub_semver/src/version.dart';
 import 'package:pubspec_parse/pubspec_parse.dart';
 import 'package:yaml/yaml.dart';
 
-import 'diff.dart';
+import 'models.dart';
 
 final regex = RegExp(r"<code>(.*)<\/code>", dotAll: true);
 
@@ -48,7 +48,8 @@ void main(List<String> arguments) async {
 
   final origin = isCI ? Origin.ci : Origin.manually;
 
-  final date = DateFormat.yMMMMd().add_Hms().format(DateTime.now().toUtc()) + " UTC";
+  final date =
+      "${DateFormat.yMMMMd().add_Hms().format(DateTime.now().toUtc())} UTC";
 
   final proj = Directory(parsed.rest.first);
   final pubspec = WritableFile(path.join(proj.path, "pubspec.yaml"), dry);
@@ -76,7 +77,8 @@ void main(List<String> arguments) async {
 
   // ===== EDIT lib/all.yaml =====
 
-  final url = Uri.parse("https://dart-lang.github.io/linter/lints/options/options.html");
+  final url = Uri.parse(
+      "https://dart-lang.github.io/linter/lints/options/options.html");
   final res = await http.get(url);
 
   final match = regex.firstMatch(res.body)?.group(1);
@@ -88,7 +90,7 @@ void main(List<String> arguments) async {
 
   if (lastHash == currentHash) {
     if (force) {
-      print("[i] Content is identical but we are forcing...");
+      print("\n[i] Content is identical but we are forcing...");
     } else {
       print("\n[i] No changes in content, quitting...");
       exit(0);
@@ -116,7 +118,7 @@ $match
     throw FormatException("Invalid yaml file", fileYaml);
   }
 
-  final diff = Diff.compareYAML(loadYaml(await file.readAsString()), fileYaml);
+  final diff = Diff.fromYaml(loadYaml(await file.readAsString()), fileYaml);
   print("[i] Diff:");
   print("    ${diff.removedRules.length} removed");
   print("    ${diff.addedRules.length} added");
@@ -146,7 +148,8 @@ $match
   await file.writeAsString(string);
   await pubspec.writeAsString(updated);
   await dataFile.writeAsString(newData);
-  await changelog.writeAsString(diff.genNewChangelog(await changelog.readAsString(), nextVersion));
+  await changelog.writeAsString(
+      diff.genNewChangelog(await changelog.readAsString(), nextVersion));
   print("    Done writing !");
 
   final didWriteFiles = File(".did_write");
@@ -181,7 +184,7 @@ class WritableFile {
   Future<void> writeAsString(String content) async {
     if (dryRun) {
       print("[i] Dry run, skipped writing to ${file.path}");
-      print("=" * 10 + " content " + "=" * 10);
+      print("${"=" * 10} content ${"=" * 10}");
       print(content);
       print("=" * 20);
     } else {
