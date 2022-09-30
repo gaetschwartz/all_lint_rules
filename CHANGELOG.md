@@ -1,3 +1,7 @@
+## 0.0.15
+- Added [`collection_methods_unrelated_type`](https://dart-lang.github.io/linter/lints/collection_methods_unrelated_type.html).
+
+
 ## 0.0.14
 - Added [`unreachable_from_main`](https://dart-lang.github.io/linter/lints/unreachable_from_main.html).
 
@@ -28,6 +32,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
