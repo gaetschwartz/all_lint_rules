@@ -1,3 +1,7 @@
+## 0.0.16
+- Added [`implicit_call_tearoffs`](https://dart-lang.github.io/linter/lints/implicit_call_tearoffs.html).
+
+
 ## 0.0.15
 - Added [`collection_methods_unrelated_type`](https://dart-lang.github.io/linter/lints/collection_methods_unrelated_type.html).
 
@@ -32,6 +36,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
