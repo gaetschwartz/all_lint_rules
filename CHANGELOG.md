@@ -1,3 +1,8 @@
+## 0.0.17
+- Added [`dangling_library_doc_comments`](https://dart-lang.github.io/linter/lints/dangling_library_doc_comments.html).
+- Added [`unnecessary_library_directive`](https://dart-lang.github.io/linter/lints/unnecessary_library_directive.html).
+
+
 ## 0.0.16
 - Added [`implicit_call_tearoffs`](https://dart-lang.github.io/linter/lints/implicit_call_tearoffs.html).
 
@@ -36,6 +41,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
