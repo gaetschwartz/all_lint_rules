@@ -1,3 +1,8 @@
+## 0.0.18
+- Added [`enable_null_safety`](https://dart-lang.github.io/linter/lints/enable_null_safety.html).
+- Added [`library_annotations`](https://dart-lang.github.io/linter/lints/library_annotations.html).
+
+
 ## 0.0.17
 - Added [`dangling_library_doc_comments`](https://dart-lang.github.io/linter/lints/dangling_library_doc_comments.html).
 - Added [`unnecessary_library_directive`](https://dart-lang.github.io/linter/lints/unnecessary_library_directive.html).
@@ -41,6 +46,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
