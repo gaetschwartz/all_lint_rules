@@ -1,3 +1,7 @@
+## 0.0.20
+- Added [`prefer_equal_for_default_values`](https://dart-lang.github.io/linter/lints/prefer_equal_for_default_values.html).
+
+
 ## 0.0.19
 
 - Removed `prefer_equal_for_default_values`.
@@ -50,6 +54,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
