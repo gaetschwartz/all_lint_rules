@@ -1,3 +1,10 @@
+## 0.0.21
+
+- Removed `always_require_non_null_named_parameters`.
+- Removed `avoid_returning_null`.
+- Removed `avoid_returning_null_for_future`.
+- Removed `prefer_equal_for_default_values`.
+
 ## 0.0.20
 - Added [`prefer_equal_for_default_values`](https://dart-lang.github.io/linter/lints/prefer_equal_for_default_values.html).
 
@@ -54,6 +61,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
