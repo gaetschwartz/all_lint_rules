@@ -1,3 +1,7 @@
+## 0.0.22
+- Added [`unnecessary_breaks`](https://dart-lang.github.io/linter/lints/unnecessary_breaks.html).
+
+
 ## 0.0.21
 
 - Removed `always_require_non_null_named_parameters`.
@@ -61,6 +65,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
