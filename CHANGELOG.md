@@ -1,3 +1,9 @@
+## 0.0.23
+- Added [`avoid_as`](https://dart-lang.github.io/linter/lints/avoid_as.html).
+- Added [`invariant_booleans`](https://dart-lang.github.io/linter/lints/invariant_booleans.html).
+- Added [`prefer_bool_in_asserts`](https://dart-lang.github.io/linter/lints/prefer_bool_in_asserts.html).
+
+
 ## 0.0.22
 - Added [`unnecessary_breaks`](https://dart-lang.github.io/linter/lints/unnecessary_breaks.html).
 
@@ -65,6 +71,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
