@@ -1,3 +1,8 @@
+## 0.0.24
+- Added [`prefer_equal_for_default_values`](https://dart-lang.github.io/linter/lints/prefer_equal_for_default_values.html).
+- Added [`super_goes_last`](https://dart-lang.github.io/linter/lints/super_goes_last.html).
+
+
 ## 0.0.23
 - Added [`avoid_as`](https://dart-lang.github.io/linter/lints/avoid_as.html).
 - Added [`invariant_booleans`](https://dart-lang.github.io/linter/lints/invariant_booleans.html).
@@ -71,6 +76,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
