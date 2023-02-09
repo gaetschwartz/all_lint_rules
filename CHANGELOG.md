@@ -1,3 +1,7 @@
+## 0.0.25
+- Added [`invalid_case_patterns`](https://dart-lang.github.io/linter/lints/invalid_case_patterns.html).
+
+
 ## 0.0.24
 - Added [`prefer_equal_for_default_values`](https://dart-lang.github.io/linter/lints/prefer_equal_for_default_values.html).
 - Added [`super_goes_last`](https://dart-lang.github.io/linter/lints/super_goes_last.html).
@@ -76,6 +80,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
