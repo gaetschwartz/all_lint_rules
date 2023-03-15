@@ -1,3 +1,12 @@
+## 0.0.26
+
+- Removed `avoid_as`.
+- Removed `enable_null_safety`.
+- Removed `invariant_booleans`.
+- Removed `prefer_bool_in_asserts`.
+- Removed `prefer_equal_for_default_values`.
+- Removed `super_goes_last`.
+
 ## 0.0.25
 - Added [`invalid_case_patterns`](https://dart-lang.github.io/linter/lints/invalid_case_patterns.html).
 
@@ -80,6 +89,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
