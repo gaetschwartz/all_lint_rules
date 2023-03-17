@@ -1,3 +1,7 @@
+## 0.0.27
+- Added [`deprecated_member_use_from_same_package`](https://dart-lang.github.io/linter/lints/deprecated_member_use_from_same_package.html).
+
+
 ## 0.0.26
 
 - Removed `avoid_as`.
@@ -89,6 +93,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
