@@ -1,3 +1,7 @@
+## 0.0.29
+- Added [`type_literal_in_constant_pattern`](https://dart-lang.github.io/linter/lints/type_literal_in_constant_pattern.html).
+
+
 ## 0.0.28
 - Added [`implicit_reopen`](https://dart-lang.github.io/linter/lints/implicit_reopen.html).
 
@@ -97,6 +101,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
