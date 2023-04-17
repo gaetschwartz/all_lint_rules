@@ -1,3 +1,7 @@
+## 0.0.30
+- Added [`matching_super_parameters`](https://dart-lang.github.io/linter/lints/matching_super_parameters.html).
+
+
 ## 0.0.29
 - Added [`type_literal_in_constant_pattern`](https://dart-lang.github.io/linter/lints/type_literal_in_constant_pattern.html).
 
@@ -101,6 +105,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
