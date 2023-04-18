@@ -1,3 +1,7 @@
+## 0.0.31
+- Added [`no_literal_bool_comparisons`](https://dart-lang.github.io/linter/lints/no_literal_bool_comparisons.html).
+
+
 ## 0.0.30
 - Added [`matching_super_parameters`](https://dart-lang.github.io/linter/lints/matching_super_parameters.html).
 
@@ -105,6 +109,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
