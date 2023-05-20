@@ -1,3 +1,8 @@
+## 0.0.32
+
+- Removed `iterable_contains_unrelated_type`.
+- Removed `list_remove_unrelated_type`.
+
 ## 0.0.31
 - Added [`no_literal_bool_comparisons`](https://dart-lang.github.io/linter/lints/no_literal_bool_comparisons.html).
 
@@ -109,6 +114,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
