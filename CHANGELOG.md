@@ -1,3 +1,7 @@
+## 0.0.33
+- Added [`no_self_assignments`](https://dart-lang.github.io/linter/lints/no_self_assignments.html).
+
+
 ## 0.0.32
 
 - Removed `iterable_contains_unrelated_type`.
@@ -114,6 +118,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
