@@ -1,3 +1,7 @@
+## 0.0.34
+- Added [`no_wildcard_variable_uses`](https://dart-lang.github.io/linter/lints/no_wildcard_variable_uses.html).
+
+
 ## 0.0.33
 - Added [`no_self_assignments`](https://dart-lang.github.io/linter/lints/no_self_assignments.html).
 
@@ -118,6 +122,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
