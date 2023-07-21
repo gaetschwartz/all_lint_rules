@@ -41,12 +41,10 @@ jobs:
 
       - name: Setup Pub Credentials
         if: ${{ env.did_write == 'true' }}
-        env:
-          PUB_DEV_PUBLISH_ACCESS_TOKEN: ${{ secrets.PUB_DEV_PUBLISH_ACCESS_TOKEN }}
-          PUB_DEV_PUBLISH_REFRESH_TOKEN: ${{ secrets.PUB_DEV_PUBLISH_REFRESH_TOKEN }}
-          PUB_DEV_PUBLISH_TOKEN_ENDPOINT: ${{ secrets.PUB_DEV_PUBLISH_TOKEN_ENDPOINT }}
-          PUB_DEV_PUBLISH_EXPIRATION: ${{ secrets.PUB_DEV_PUBLISH_EXPIRATION }}
-        run: bash ./CI/pub_login.sh
+        run: |
+          echo ${{ secrets.GOOGLE_SERVICE_ACCOUNT }} > /tmp/service-account.json
+          gcloud auth activate-service-account --key-file=/tmp/service-account.json
+          gcloud auth print-identity-token --audiences=https://pub.dev | dart pub token add https://pub.dev
 
       - name: Publish package
         if: ${{ env.did_write == 'true' }}

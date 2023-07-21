@@ -4,4 +4,4 @@ version: 0.0.35
 repository: https://github.com/gaetschwartz/all_lint_rules
 
 environment:
-  sdk: ">=2.14.0 <3.0.0"
+  sdk: ">=2.14.0 <4.0.0"
