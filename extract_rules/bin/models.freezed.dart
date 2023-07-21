@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'models.dart';
 
@@ -31,33 +31,37 @@ mixin _$Diff {
 /// @nodoc
 abstract class $DiffCopyWith<$Res> {
   factory $DiffCopyWith(Diff value, $Res Function(Diff) then) =
-      _$DiffCopyWithImpl<$Res>;
+      _$DiffCopyWithImpl<$Res, Diff>;
+  @useResult
   $Res call({List<String> oldRules, List<String> newRules});
 }
 
 /// @nodoc
-class _$DiffCopyWithImpl<$Res> implements $DiffCopyWith<$Res> {
+class _$DiffCopyWithImpl<$Res, $Val extends Diff>
+    implements $DiffCopyWith<$Res> {
   _$DiffCopyWithImpl(this._value, this._then);
 
-  final Diff _value;
   // ignore: unused_field
-  final $Res Function(Diff) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? oldRules = freezed,
-    Object? newRules = freezed,
+    Object? oldRules = null,
+    Object? newRules = null,
   }) {
     return _then(_value.copyWith(
-      oldRules: oldRules == freezed
+      oldRules: null == oldRules
           ? _value.oldRules
           : oldRules // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      newRules: newRules == freezed
+      newRules: null == newRules
           ? _value.newRules
           : newRules // ignore: cast_nullable_to_non_nullable
               as List<String>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -66,29 +70,28 @@ abstract class _$$_DiffCopyWith<$Res> implements $DiffCopyWith<$Res> {
   factory _$$_DiffCopyWith(_$_Diff value, $Res Function(_$_Diff) then) =
       __$$_DiffCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<String> oldRules, List<String> newRules});
 }
 
 /// @nodoc
-class __$$_DiffCopyWithImpl<$Res> extends _$DiffCopyWithImpl<$Res>
+class __$$_DiffCopyWithImpl<$Res> extends _$DiffCopyWithImpl<$Res, _$_Diff>
     implements _$$_DiffCopyWith<$Res> {
   __$$_DiffCopyWithImpl(_$_Diff _value, $Res Function(_$_Diff) _then)
-      : super(_value, (v) => _then(v as _$_Diff));
+      : super(_value, _then);
 
-  @override
-  _$_Diff get _value => super._value as _$_Diff;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? oldRules = freezed,
-    Object? newRules = freezed,
+    Object? oldRules = null,
+    Object? newRules = null,
   }) {
     return _then(_$_Diff(
-      oldRules == freezed
+      null == oldRules
           ? _value._oldRules
           : oldRules // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      newRules == freezed
+      null == newRules
           ? _value._newRules
           : newRules // ignore: cast_nullable_to_non_nullable
               as List<String>,
@@ -109,6 +112,7 @@ class _$_Diff extends _Diff {
   final List<String> _oldRules;
   @override
   List<String> get oldRules {
+    if (_oldRules is EqualUnmodifiableListView) return _oldRules;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_oldRules);
   }
@@ -116,6 +120,7 @@ class _$_Diff extends _Diff {
   final List<String> _newRules;
   @override
   List<String> get newRules {
+    if (_newRules is EqualUnmodifiableListView) return _newRules;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_newRules);
   }
@@ -143,6 +148,7 @@ class _$_Diff extends _Diff {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DiffCopyWith<_$_Diff> get copyWith =>
       __$$_DiffCopyWithImpl<_$_Diff>(this, _$identity);
 
@@ -188,33 +194,37 @@ mixin _$RulesDiff {
 /// @nodoc
 abstract class $RulesDiffCopyWith<$Res> {
   factory $RulesDiffCopyWith(RulesDiff value, $Res Function(RulesDiff) then) =
-      _$RulesDiffCopyWithImpl<$Res>;
+      _$RulesDiffCopyWithImpl<$Res, RulesDiff>;
+  @useResult
   $Res call({List<String> addedRules, List<String> removedRules});
 }
 
 /// @nodoc
-class _$RulesDiffCopyWithImpl<$Res> implements $RulesDiffCopyWith<$Res> {
+class _$RulesDiffCopyWithImpl<$Res, $Val extends RulesDiff>
+    implements $RulesDiffCopyWith<$Res> {
   _$RulesDiffCopyWithImpl(this._value, this._then);
 
-  final RulesDiff _value;
   // ignore: unused_field
-  final $Res Function(RulesDiff) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? addedRules = freezed,
-    Object? removedRules = freezed,
+    Object? addedRules = null,
+    Object? removedRules = null,
   }) {
     return _then(_value.copyWith(
-      addedRules: addedRules == freezed
+      addedRules: null == addedRules
           ? _value.addedRules
           : addedRules // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      removedRules: removedRules == freezed
+      removedRules: null == removedRules
           ? _value.removedRules
           : removedRules // ignore: cast_nullable_to_non_nullable
               as List<String>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -224,30 +234,30 @@ abstract class _$$_RulesDiffCopyWith<$Res> implements $RulesDiffCopyWith<$Res> {
           _$_RulesDiff value, $Res Function(_$_RulesDiff) then) =
       __$$_RulesDiffCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<String> addedRules, List<String> removedRules});
 }
 
 /// @nodoc
-class __$$_RulesDiffCopyWithImpl<$Res> extends _$RulesDiffCopyWithImpl<$Res>
+class __$$_RulesDiffCopyWithImpl<$Res>
+    extends _$RulesDiffCopyWithImpl<$Res, _$_RulesDiff>
     implements _$$_RulesDiffCopyWith<$Res> {
   __$$_RulesDiffCopyWithImpl(
       _$_RulesDiff _value, $Res Function(_$_RulesDiff) _then)
-      : super(_value, (v) => _then(v as _$_RulesDiff));
+      : super(_value, _then);
 
-  @override
-  _$_RulesDiff get _value => super._value as _$_RulesDiff;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? addedRules = freezed,
-    Object? removedRules = freezed,
+    Object? addedRules = null,
+    Object? removedRules = null,
   }) {
     return _then(_$_RulesDiff(
-      addedRules: addedRules == freezed
+      addedRules: null == addedRules
           ? _value._addedRules
           : addedRules // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      removedRules: removedRules == freezed
+      removedRules: null == removedRules
           ? _value._removedRules
           : removedRules // ignore: cast_nullable_to_non_nullable
               as List<String>,
@@ -270,6 +280,7 @@ class _$_RulesDiff implements _RulesDiff {
   final List<String> _addedRules;
   @override
   List<String> get addedRules {
+    if (_addedRules is EqualUnmodifiableListView) return _addedRules;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_addedRules);
   }
@@ -277,6 +288,7 @@ class _$_RulesDiff implements _RulesDiff {
   final List<String> _removedRules;
   @override
   List<String> get removedRules {
+    if (_removedRules is EqualUnmodifiableListView) return _removedRules;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_removedRules);
   }
@@ -306,6 +318,7 @@ class _$_RulesDiff implements _RulesDiff {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RulesDiffCopyWith<_$_RulesDiff> get copyWith =>
       __$$_RulesDiffCopyWithImpl<_$_RulesDiff>(this, _$identity);
 

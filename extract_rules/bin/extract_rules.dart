@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:args/args.dart';
 import 'package:crypto/crypto.dart';
+import 'package:html/parser.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:path/path.dart' as path;
@@ -77,12 +78,12 @@ void main(List<String> arguments) async {
 
   // ===== EDIT lib/all.yaml =====
 
-  final url = Uri.parse(
-      "https://dart-lang.github.io/linter/lints/options/options.html");
+  final url = Uri.parse("https://dart.dev/tools/linter-rules/all");
   final res = await http.get(url);
+  final document = parse(res.body);
 
-  final match = regex.firstMatch(res.body)?.group(1);
-  if (match == null) throw Exception("Unable to parse $url");
+  final match = document.getElementsByTagName("pre")[0].text;
+
   final currentHash = base64Encode(sha256.convert(utf8.encode(match)).bytes);
   print("[i] Hashes:");
   print("    Last content hash: $lastHash");
