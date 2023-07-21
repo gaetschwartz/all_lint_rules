@@ -42,7 +42,7 @@ jobs:
       - name: Setup Pub Credentials
         if: ${{ env.did_write == 'true' }}
         run: |
-          echo ${{ secrets.GOOGLE_SERVICE_ACCOUNT }} > /tmp/service-account.json
+          echo "${{ secrets.GOOGLE_SERVICE_ACCOUNT }}" > /tmp/service-account.json
           gcloud auth activate-service-account --key-file=/tmp/service-account.json
           gcloud auth print-identity-token --audiences=https://pub.dev | dart pub token add https://pub.dev
 
