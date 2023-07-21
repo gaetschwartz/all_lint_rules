@@ -1,3 +1,6 @@
+## 0.0.36
+No changes in the rules.
+
 ## 0.0.35
 - Added [`avoid_returning_null_for_future`](https://dart-lang.github.io/linter/lints/avoid_returning_null_for_future.html).
 - Added [`iterable_contains_unrelated_type`](https://dart-lang.github.io/linter/lints/iterable_contains_unrelated_type.html).
@@ -130,6 +133,7 @@
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+  
   
   
   
