@@ -1,6 +1,6 @@
 name: all_lint_rules_community
 description: Automatically updated all lint rules file !
-version: 0.0.37
+version: 0.0.38
 repository: https://github.com/gaetschwartz/all_lint_rules
 
 environment:

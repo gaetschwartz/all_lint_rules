@@ -1,3 +1,6 @@
+## 0.0.38
+No changes in the rules.
+
 ## 0.0.37
 
 No changes in the rules.
@@ -140,3 +143,5 @@ No changes in the rules.
 - Added `use_colored_box`.
 - Added `use_enums`.
 - Added `use_super_initializers`.
+
+  
