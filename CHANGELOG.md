@@ -1,3 +1,7 @@
+## 0.0.39
+- Added [`annotate_redeclares`](https://dart-lang.github.io/linter/lints/annotate_redeclares.html).
+
+
 ## 0.0.38
 No changes in the rules.
 
@@ -144,4 +148,5 @@ No changes in the rules.
 - Added `use_enums`.
 - Added `use_super_initializers`.
 
+  
   
