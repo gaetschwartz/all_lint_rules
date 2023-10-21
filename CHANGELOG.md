@@ -1,3 +1,7 @@
+## 0.0.40
+- Added [`avoid_unstable_final_fields`](https://dart-lang.github.io/linter/lints/avoid_unstable_final_fields.html).
+
+
 ## 0.0.39
 - Added [`annotate_redeclares`](https://dart-lang.github.io/linter/lints/annotate_redeclares.html).
 
@@ -148,5 +152,6 @@ No changes in the rules.
 - Added `use_enums`.
 - Added `use_super_initializers`.
 
+  
   
   
