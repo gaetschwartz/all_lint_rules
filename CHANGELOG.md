@@ -1,3 +1,16 @@
+## 0.0.41
+- Added [`document_ignores`](https://dart-lang.github.io/linter/lints/document_ignores.html).
+- Added [`invalid_runtime_check_with_js_interop_types`](https://dart-lang.github.io/linter/lints/invalid_runtime_check_with_js_interop_types.html).
+- Added [`missing_code_block_language_in_doc_comment`](https://dart-lang.github.io/linter/lints/missing_code_block_language_in_doc_comment.html).
+- Added [`unintended_html_in_doc_comment`](https://dart-lang.github.io/linter/lints/unintended_html_in_doc_comment.html).
+- Added [`unnecessary_library_name`](https://dart-lang.github.io/linter/lints/unnecessary_library_name.html).
+- Removed `always_require_non_null_named_parameters`.
+- Removed `avoid_returning_null`.
+- Removed `avoid_returning_null_for_future`.
+- Removed `avoid_unstable_final_fields`.
+- Removed `iterable_contains_unrelated_type`.
+- Removed `list_remove_unrelated_type`.
+
 ## 0.0.40
 - Added [`avoid_unstable_final_fields`](https://dart-lang.github.io/linter/lints/avoid_unstable_final_fields.html).
 
@@ -152,6 +165,7 @@ No changes in the rules.
 - Added `use_enums`.
 - Added `use_super_initializers`.
 
+  
   
   
   
