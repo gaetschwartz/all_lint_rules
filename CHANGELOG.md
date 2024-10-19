@@ -1,3 +1,7 @@
+## 0.0.42
+
+- Removed `avoid_null_checks_in_equality_operators`.
+
 ## 0.0.41
 - Added [`document_ignores`](https://dart-lang.github.io/linter/lints/document_ignores.html).
 - Added [`invalid_runtime_check_with_js_interop_types`](https://dart-lang.github.io/linter/lints/invalid_runtime_check_with_js_interop_types.html).
@@ -165,6 +169,7 @@ No changes in the rules.
 - Added `use_enums`.
 - Added `use_super_initializers`.
 
+  
   
   
   
