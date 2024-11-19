@@ -1,3 +1,11 @@
+## 0.0.43
+- Added [`avoid_futureor_void`](https://dart-lang.github.io/linter/lints/avoid_futureor_void.html).
+- Added [`avoid_null_checks_in_equality_operators`](https://dart-lang.github.io/linter/lints/avoid_null_checks_in_equality_operators.html).
+- Added [`omit_obvious_local_variable_types`](https://dart-lang.github.io/linter/lints/omit_obvious_local_variable_types.html).
+- Added [`specify_nonobvious_local_variable_types`](https://dart-lang.github.io/linter/lints/specify_nonobvious_local_variable_types.html).
+- Added [`use_truncating_division`](https://dart-lang.github.io/linter/lints/use_truncating_division.html).
+- Removed `unsafe_html`.
+
 ## 0.0.42
 
 - Removed `avoid_null_checks_in_equality_operators`.
@@ -169,6 +177,7 @@ No changes in the rules.
 - Added `use_enums`.
 - Added `use_super_initializers`.
 
+  
   
   
   
